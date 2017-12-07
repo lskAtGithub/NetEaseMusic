@@ -22,10 +22,18 @@ $(function (){
   })
 
   let audio = document.createElement('audio')
-  audio.src = 'http://m10.music.126.net/20171207070946/0df1073a276a298cd095a7ecbfdd094f/ymusic/272c/2090/abb9/5ed1d6a6b704d8e4ee95fa291c752113.mp3'
+  audio.src = 'http://dl.stream.qqmusic.qq.com/C400000ZwOmZ0CTkzA.m4a?vkey=0A6CCDD3AC70B03CF052CF5F14E7C63A4C4E39E41738DFC47BFD8CAD57FD7AFC0B2F87F025BEEDA05DD268241D08AF5EDFCB1C16ADF43C81&guid=2265517288&uin=0&fromtag=66'
   audio.oncanplay = function (){
     audio.play()
     $('.disc-container').addClass('playing')
   }
 
+  $('.icon-pause').on('click',function (){
+    audio.pause()
+    $('.disc-container').removeClass('playing')
+  })
+  $('.icon-play').on('click',function (){
+    audio.play()
+    $('.disc-container').addClass('playing')
+  })
 })

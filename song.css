@@ -17,13 +17,28 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  /* background: #000000; */
   background: transparent url(http://p3.music.126.net/dCwwR-XlUfkmQkvam8ygCw==/18302470556468817.jpg) no-repeat center;
   background-size: cover;
 }
 
 .disc-container{
   position: relative;
+}
+.disc-container .icon-wrapper{
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+  height: 20vw;
+  width: 20vw;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+}
+.disc-container .icon{
+  width: 10vw;
+  fill: #fff;
 }
 .disc-container .disc{
   display: flex;
@@ -45,12 +60,21 @@
 }
 .disc-container .cover{
   position: absolute;
-  width: 44vw;;
+  width: 44vw;
   border-radius: 50%;
 }
 .disc-container.playing .cover,
 .disc-container.playing .light{
   animation: circle 20s infinite linear;
+}
+.disc-container .icon-pause{
+  display: none;
+}
+.disc-container.playing .icon-pause{
+  display: block;
+}
+.disc-container.playing .icon-play{
+  display: none;
 }
 
 .song-description{
