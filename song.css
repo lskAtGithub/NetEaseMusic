@@ -50,6 +50,7 @@
   width: 24vw;
   position: absolute;
   left: 45vw;
+  z-index: 1;
 }
 .disc-container .ring{
   width: 72vw;
