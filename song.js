@@ -1,5 +1,30 @@
 $(function (){
 
+
+  let id = parseInt(location.search.match(/\bid=([^&]*)/)[1])
+
+  $.get('./songs.json').then(function (response){
+    let songs = response
+    let song = songs.filter(s=>s.id == id)[0]
+    let {url} = song
+    let audio = document.createElement('audio')
+      audio.src = url
+      audio.oncanplay = function (){
+        audio.play()
+        $('.disc-container').addClass('playing')
+      }
+
+      $('.icon-pause').on('click',function (){
+        audio.pause()
+        $('.disc-container').removeClass('playing')
+      })
+      $('.icon-play').on('click',function (){
+        audio.play()
+        $('.disc-container').addClass('playing')
+      })
+    })
+  })
+
   /* 通过get获取歌词，拼接并生成获取的歌词 */
   $.get('/lyric.json').then(function (object){
     let {lyric} = object
@@ -21,19 +46,4 @@ $(function (){
     })
   })
 
-  let audio = document.createElement('audio')
-  audio.src = '//p0my1su86.bkt.clouddn.com/Martin%20Tungevaag%20-%20Wicked%20Wonderland%202014.mp3'
-  audio.oncanplay = function (){
-    audio.play()
-    $('.disc-container').addClass('playing')
-  }
-
-  $('.icon-pause').on('click',function (){
-    audio.pause()
-    $('.disc-container').removeClass('playing')
-  })
-  $('.icon-play').on('click',function (){
-    audio.play()
-    $('.disc-container').addClass('playing')
-  })
-})
+  

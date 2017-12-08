@@ -88,6 +88,9 @@ section>h2:first-child{
 .lastestMusic>ol{
   padding-left: calc(2.6vw + 2px);
 }
+#loading{
+  text-align: center;
+}
 .lastestMusic>ol>li{
   border-bottom: 1px solid #e2e2e3;
   padding: 1vw 0;
