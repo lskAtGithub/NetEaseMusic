@@ -57,15 +57,19 @@
 .disc-container .light{
   width: 72vw;
   position: absolute;
+  animation: circle 20s infinite linear;
+  animation-play-state: paused;
 }
 .disc-container .cover{
   position: absolute;
   width: 44vw;
   border-radius: 50%;
+  animation: circle 20s infinite linear;
+  animation-play-state: paused;
 }
 .disc-container.playing .cover,
 .disc-container.playing .light{
-  animation: circle 20s infinite linear;
+  animation-play-state: running;
 }
 .disc-container .icon-pause{
   display: none;
@@ -91,6 +95,13 @@
 .song-description p{
   font-size: 14px;
   line-height: 24px;
+}
+.song-description .lines{
+  transition: transform 0.3s;
+}
+.song-description .lines p.active{
+  color: #2cd89f;
+  font-size: 1em;
 }
 .song-description .lyric{
   height: 72px;
