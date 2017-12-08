@@ -22,7 +22,7 @@ $(function (){
   })
 
   let audio = document.createElement('audio')
-  audio.src = 'http://dl.stream.qqmusic.qq.com/C400000ZwOmZ0CTkzA.m4a?vkey=0A6CCDD3AC70B03CF052CF5F14E7C63A4C4E39E41738DFC47BFD8CAD57FD7AFC0B2F87F025BEEDA05DD268241D08AF5EDFCB1C16ADF43C81&guid=2265517288&uin=0&fromtag=66'
+  audio.src = '//p0my1su86.bkt.clouddn.com/Martin%20Tungevaag%20-%20Wicked%20Wonderland%202014.mp3'
   audio.oncanplay = function (){
     audio.play()
     $('.disc-container').addClass('playing')
