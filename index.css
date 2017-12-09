@@ -8,6 +8,22 @@ body{
   font-size: 3.7vw;
 }
 
+
+.wrap{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: white;
+}
+.tabs-content{
+  margin-top: 28vw;
+}
+.tabs-content::before{
+  content: '';
+  display: table;
+}
 /*推荐音乐*/
 section>h2:first-child{
   font-size: 1.2em;
@@ -174,6 +190,7 @@ ol.tabs-content>li.page-3{
 
 ol.tabs-btn>li.active>span{
   border-bottom: 2px solid #d33a31;
+  padding: 0 5px;
 }
 ol.tabs-btn>li.active{
   display: block;
