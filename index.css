@@ -28,7 +28,7 @@ body{
 section>h2:first-child{
   font-size: 1.2em;
   border-left: 2px solid #d33a31;
-  margin: 4vw 0;
+  margin: 6vw 0 4vw 0;
   font-weight: normal;
   padding-left: 2.6vw;
   line-height: 1;
@@ -167,13 +167,70 @@ section.art .copyright{
 }
 
 /*热歌榜*/
+.page-2 .ct{
+  height: 40vw;
+  background: url(//s3.music.126.net/m/s/img/hot_music_bg_2x.jpg?f01a252…) no-repeat;
+  background-size: contain;
+}
+.page-2 .ct .update{
+  color: rgba(255,255,255,0.6);
+  font-size: 1vw;
+  margin-left: 5vw;
+  padding-top: 10vw;
+}
+.page-2 .ct .update>h3{
+  font-size: 12vw;
+}
 
-
-
+.page-2 .hot>ol{
+  padding-left: calc(2.6vw + 2px);
+}
+#page2-loading{
+  text-align: center;
+}
+.page-2 .hot>ol>li{
+  border-bottom: 1px solid #e2e2e3;
+  padding: 1vw 0;
+  position: relative;
+}
+.page-2 .hot>ol>li h3{
+  font-size: 4.8vw;
+}
+.page-2 .hot>ol>li p{
+  font-size: 3.8vw;
+  color: #888;
+  padding: 0.5vw 0;
+  display: flex;
+  align-items: center;
+}
+.page-2 .hot>ol>li svg.play{
+  width: 7vw;
+  height: 7vw;
+  fill: #aaa;
+  position: absolute;
+  right: 4vw;
+  top: 50%;
+  transform: translateY(-50%)
+}
+.page-2 .hot>ol>li svg.sq{
+  width: 4.5vw;
+  height: 4.5vw;
+  margin-right: 0.5vw;
+  fill: #f60;
+}
+.page-2 .hotdn{
+  text-align: center;
+  color: #aaa;
+  padding: 5vw 0;
+}
 
 /*搜索*/
-
-
+.wrapPage{
+  height: 20vw;
+  border: 1px solid #ddd;
+  position: relative;
+  padding-top: 3vw;
+}
 
 
 /*Tabs切换*/
