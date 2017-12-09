@@ -1,4 +1,5 @@
 $(function (){
+
   $.get('./songs.json').then(function (response){
     let items = response;
     items.forEach((i) => {
@@ -18,5 +19,14 @@ $(function (){
       $('#lastestMusic').append($li);
     });
     $('#loading').remove();
+  })
+
+  /* tab切换 */
+  $('.tabs-btn').on('click','li',function (e){
+    let $li = $(e.currentTarget)
+    let index = $li.index()
+    $li.addClass('active').siblings().removeClass('active')
+    $('.tabs-content').children().eq(index)
+     .addClass('active').siblings().removeClass('active')
   })
 })

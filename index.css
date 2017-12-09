@@ -8,6 +8,7 @@ body{
   font-size: 3.7vw;
 }
 
+/*推荐音乐*/
 section>h2:first-child{
   font-size: 1.2em;
   border-left: 2px solid #d33a31;
@@ -48,15 +49,9 @@ section>h2:first-child{
 .siteNav>ol>li{
   flex: 1;
 }
-.siteNav>ol>li.active{
-  color: #d33a31;
-}
 .siteNav>ol>li>span{
   line-height: 10vw;
   display: inline-block;
-}
-.siteNav>ol>li.active>span{
-  border-bottom: 2px solid #d33a31;
 }
 
 
@@ -153,4 +148,38 @@ section.art .copyright{
   color: #888;
   text-align: center;
   padding-top: 1.5vw;
+}
+
+/*热歌榜*/
+
+
+
+
+/*搜索*/
+
+
+
+
+/*Tabs切换*/
+
+ol.tabs-content>li.page-1{
+  display: none;
+}
+ol.tabs-content>li.page-2{
+  display: none;
+}
+ol.tabs-content>li.page-3{
+  display: none;
+}
+
+ol.tabs-btn>li.active>span{
+  border-bottom: 2px solid #d33a31;
+}
+ol.tabs-btn>li.active{
+  display: block;
+  color: #d33a31;
+}
+
+ol.tabs-content>li.active{
+  display: block;
 }
