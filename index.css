@@ -3,6 +3,8 @@
 a{text-decoration: none; color: inherit}
 ol,ul,li{list-style: none;}
 h1,h2,h3{font-weight: normal}
+input{ outline: none; }
+input:focus{ outline: none; }
 
 body{
   font-size: 3.7vw;
@@ -225,11 +227,40 @@ section.art .copyright{
 }
 
 /*搜索*/
+.page-3{
+  background: #fbfcfd;
+}
 .wrapPage{
   height: 20vw;
-  border: 1px solid #ddd;
   position: relative;
-  padding-top: 3vw;
+  padding: 0 3vw;
+  border-bottom: 1px solid #ccc;
+}
+.wrapPage .searchWrap{
+  position: absolute;
+  top: 5vw;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 3vw;
+  padding: 1vw;
+  width: 94vw;
+  border: 1px solid #ccc;
+  border-radius: 5vw;
+  z-index: 2;
+  background: #ebecec;
+  color: #333;
+}
+.wrapPage .searchWrap svg{
+  width: 6vw;
+  height: 6vw;
+}
+#search{
+  width: 100%;
+  border: none;
+  background: #ebecec;
+  
 }
 
 
