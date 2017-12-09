@@ -4,12 +4,13 @@ $(function (){
   let id = parseInt(location.search.match(/\bid=([^&]*)/)[1])
 
   $.get('./songs.json').then(function (response){
-    let songs = response
-    let song = songs.filter(s=>s.id == id)[0]
-    let {url,songname,lyric} = song
+      let songs = response
+      let song = songs.filter(s=>s.id == id)[0]
+      let {url,songname,lyric,cover} = song
 
-    initText(songname,lyric)
-    initPlayer.call(undefined,url)
+      initText(songname,lyric)
+      initPlayer.call(undefined,url)
+      initCover.call(undefined,cover)
     })
   })
 
@@ -19,6 +20,10 @@ $(function (){
     $('#singer').text(name)
     parseLyric(lyric)
 
+  }
+  function initCover(cover){
+    let $cover = $('#cover')
+    $cover.attr('src',cover)
   }
   function initPlayer(url){
     let audio = document.createElement('audio')
