@@ -260,9 +260,44 @@ section.art .copyright{
   width: 100%;
   border: none;
   background: #ebecec;
-  
+  font-size: 3vw;
 }
 
+
+.page-3 ol>li{
+  border-bottom: 1px solid #e2e2e3;
+  padding: 1vw 0;
+  position: relative;
+}
+.page-3 ol>li h3{
+  font-size: 2.8vw;
+}
+.page-3 ol>li p{
+  font-size: 1.8vw;
+  color: #888;
+  padding: 0.5vw 0;
+  display: flex;
+  align-items: center;
+}
+.page-3 ol>li svg.play{
+  width: 7vw;
+  height: 7vw;
+  fill: #aaa;
+  position: absolute;
+  right: 4vw;
+  top: 50%;
+  transform: translateY(-50%)
+}
+.page-3 ol>li svg.sq{
+  width: 4.5vw;
+  height: 4.5vw;
+  margin-right: 0.5vw;
+  fill: #f60;
+}
+
+#output{
+  padding: 2vw;
+}
 
 /*Tabs切换*/
 
